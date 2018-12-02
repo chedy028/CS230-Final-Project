@@ -15,7 +15,7 @@ class data_generator_4channels:
             batch_images = np.empty((batch_size, shape[0], shape[1], shape[2]))
             batch_labels = np.zeros((batch_size, 28))
             for i, index in enumerate(random_indexes):
-                image = data_generator.load_image(
+                image = data_generator_4channels.load_image(
                     dataset[index]['path'], shape)
                 #if augument:
                     #image = data_generator.augment(image)
@@ -42,7 +42,7 @@ class data_generator_3channels:
             batch_images = np.empty((batch_size, shape[0], shape[1], shape[2]))
             batch_labels = np.zeros((batch_size, 28))
             for i, index in enumerate(random_indexes):
-                image = data_generator.load_image(
+                image = data_generator_3channels.load_image(
                     dataset[index]['path'], shape)
                 #if augument:
                     #image = data_generator.augment(image)
